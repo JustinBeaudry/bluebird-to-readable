@@ -1,0 +1,42 @@
+{
+  "name": "bluebird-to-readable",
+  "version": "1.0.0",
+  "description": "Convert a Bluebird Promise to a Readable stream. Typescript only.",
+  "author": "Justin Beaudry <beaudry.justin@gmail.com>",
+  "license": "MIT",
+  "main": "bluebirdToReadable.ts",
+  "files": [
+    "LICENSE",
+    "bluebirdToReadable.ts"
+  ],
+  "scripts": {
+    "example": "npx ts-node example.ts"
+  },
+  "keywords": [
+    "bluebird",
+    "streams",
+    "promise to stream"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JustinBeaudry/bluebird-to-readable.git"
+  },
+  "homepage": "https://github.com/JustinBeaudry/bluebird-to-readable#readme",
+  "dependencies": {
+    "@types/bluebird": "3.x.x",
+    "bluebird": "3.x.x"
+  },
+  "devDependencies": {
+    "@types/node": "10.x.x",
+    "ts-node": "7.x.x",
+    "tslib": "1.x.x",
+    "typescript": "3.x.x"
+  },
+  "peerDependencies": {
+    "@types/bluebird": "3.x.x",
+    "bluebird": "3.x.x"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
