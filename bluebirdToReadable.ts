@@ -13,13 +13,18 @@ Bluebird.setScheduler((scheduler: (callback: CbAny) => void) => {
 
 type MaybeErr = Error | null;
 type DestroyCallback = (error: ( MaybeErr )) => void;
+type ReadableOptions = {
+  highWaterMark?: number;
+  encoding?: string;
+  objectMode?: boolean;
+};
 
 // noinspection JSUnusedGlobalSymbols
 export class BluebirdToReadable<T> extends Readable {
   private promise: Bluebird<T>;
   // noinspection JSUnusedLocalSymbols
-  private constructor(promise: Bluebird<T>) {
-    super({objectMode: true});
+  private constructor(promise: Bluebird<T>, options?: ReadableOptions) {
+    super(options);
     this.promise = promise;
   }
   public _read(): void {
