@@ -1,6 +1,6 @@
 export default {
 	files: [
-		'test.js'
+		'test/test.js'
 	],
 	sources: [
 		'bluebirdToReadable.ts'
