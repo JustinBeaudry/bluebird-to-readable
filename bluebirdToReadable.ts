@@ -20,7 +20,7 @@ type ReadableOptions = {
 };
 
 // noinspection JSUnusedGlobalSymbols
-export class BluebirdToReadable<T> extends Readable {
+export class BluebirdToReadable<T=any> extends Readable {
   private promise: Bluebird<T>;
   // noinspection JSUnusedLocalSymbols
   private constructor(promise: Bluebird<T>, options?: ReadableOptions) {
