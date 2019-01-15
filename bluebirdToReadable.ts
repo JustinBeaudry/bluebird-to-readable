@@ -19,11 +19,9 @@ type ReadableOptions = {
   objectMode?: boolean;
 };
 
-// noinspection JSUnusedGlobalSymbols
-export class BluebirdToReadable<T=any> extends Readable {
+class BluebirdToReadableStream<T=any> extends Readable {
   private promise: Bluebird<T>;
-  // noinspection JSUnusedLocalSymbols
-  private constructor(promise: Bluebird<T>, options?: ReadableOptions) {
+  constructor(promise: Bluebird<T>, options?: ReadableOptions) {
     super(options);
     this.promise = promise;
   }
@@ -46,8 +44,8 @@ export class BluebirdToReadable<T=any> extends Readable {
     this.promise.cancel();
     callback(err);
   }
-  // noinspection JSUnusedGlobalSymbols
-  static construct<K>(promise: Bluebird<K>): BluebirdToReadable<K> {
-    return Reflect.construct(BluebirdToReadable, [promise]);
-  }
+}
+
+export function BluebirdToReadable<T>(promise: Bluebird<T>, options?: ReadableOptions) {
+  return Reflect.construct(BluebirdToReadableStream, [promise, options]);
 }
