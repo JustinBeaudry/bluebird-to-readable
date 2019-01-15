@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  Convert a Bluebird Promise to a Readable stream.
+  Convert a Bluebird Promise to a Readable stream. In Typescript.
 </p>
 
 <p align="center">
