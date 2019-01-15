@@ -32,19 +32,15 @@ import {BluebirdToReadable} from 'bluebird-to-readable';
 
 const promise: Bluebird<string> = Bluebird.resolve(`They're just questions Leon.\r\n`);
 
-// new is private, you must call the static method `construct`
-new BluebirdToReadable(promise); // error TS2673: Constructor of class 'BluebirdToReadable' is private and only accessible within the class declaration.
-
-const readable = BluebirdToReadable.construct<string>(promise);
+// The Type Generic is optional and defaults to `any`
+const readable = BluebirdToReadable<string>(promise);
 
 readable.pipe(process.stdout); // "They're just questions Leon."
 ```
 
 ## API
 
-Though BluebirdToReadable is a class constructor, it's constructor is private. calling new will throw a `TS2673` error. Calling the static method `construct` is the preferred method to create instances.
-
-### `BluebirdToReadable.construct<T>(Bluebird)`
+### `BluebirdToReadable<T=any>(Bluebird<T>)`
 
 This returns a paused (or non-flowing) `Readable` stream. Calling `.pipe()` or using the `readable` event and invoking `.read()` will un-pause or begin flowing data from the readable stream into the `Transform` or `Writable` stream.
 
