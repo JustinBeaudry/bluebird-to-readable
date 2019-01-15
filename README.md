@@ -12,6 +12,12 @@
   <img alt="Node 10.x.x" src="https://img.shields.io/badge/node-10.x.x-blue.svg">
 </p>
 
+## Why Bluebird and not Core Promise?
+This project is explicitly designed to work with Bluebird Promises because of the feature-rich API it provides. Not convinced?
+
+* http://bluebirdjs.com/docs/why-bluebird.html
+* https://medium.com/@housecor/5-reasons-to-keep-using-bluebird-for-promises-a4f59c8a5d69
+
 ## Install
 
 ```bash
