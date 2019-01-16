@@ -1,0 +1,12 @@
+*.js text
+*.md text
+*.json text
+*.yml text
+.editorconfig text
+.npmignore text
+.npmrc text
+.nvmrc text
+.prettierrc text
+LICENSE text
+package.json -diff
+package-lock.json -diff

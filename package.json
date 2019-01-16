@@ -1,36 +1,63 @@
 {
   "name": "bluebird-to-readable",
   "version": "2.0.0",
-  "description": "Convert a Bluebird Promise to a Readable stream. In Typescript.",
-  "author": "Justin Beaudry <beaudry.justin@gmail.com>",
+  "description": "TypeScript library to convert a Bluebird Promise to a Readable stream.",
+  "author": {
+    "name": "Justin Beaudry",
+    "email": "beaudry.justin@gmail.com",
+    "url": "https://github.com/JustinBeaudry"
+  },
   "license": "MIT",
   "main": "bluebirdToReadable.ts",
   "files": [
-    "LICENSE",
     "bluebirdToReadable.ts"
   ],
+  "engines": {
+    "node": ">=10.15.x",
+    "npm": ">=6.4.x"
+  },
   "scripts": {
+    "clean": "rm -rf lib && rm -rf coverage",
+    "format": "npx prettier --debug-check --write 'bluebirdToReadable.ts'",
+    "lint": "npx tslint --force --format --verbose 'bluebirdToReadable.ts'",
+    "prepublishOnly": "npm run build",
+    "prebuild": "npm run clean && npm run format && npm run lint",
+    "build": "npx tsc",
+    "watch": "npm run build -- --watch",
+    "test": "npx jest",
+    "watch:test": "npx jest --watch",
+    "coverage": "npx jest --coverage",
+    "changelog": "npx changelog-maker --all > CHANGELOG.md",
     "example": "npx ts-node example.ts"
   },
   "keywords": [
     "bluebird",
     "streams",
-    "promise to stream"
+    "promise to stream",
+    "typescript streams",
+    "typescript promise to stream",
+    "promise to read stream"
   ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/JustinBeaudry/bluebird-to-readable.git"
-  },
+  "repository": "JustinBeaudry/bluebird-to-readable",
+  "bugs": "https://github.com/JustinBeaudry/project-name/issues",
   "homepage": "https://github.com/JustinBeaudry/bluebird-to-readable#readme",
   "dependencies": {
     "@types/bluebird": "3.x.x",
     "bluebird": "3.x.x"
   },
   "devDependencies": {
-    "@types/node": "10.x.x",
-    "ts-node": "7.x.x",
-    "tslib": "1.x.x",
-    "typescript": "3.x.x"
+    "@types/jest": "23.3.x",
+    "@types/node": "10.12.x",
+    "ts-node": "7.0.x",
+    "ts-jest": "23.10.x",
+    "tslib": "1.9.x",
+    "tslint": "5.12.x",
+    "typescript": "3.2.x",
+    "jest": "23.6.x",
+    "coveralls": "3.0.x",
+    "prettier": "1.15.x",
+    "tslint-config-prettier": "1.17.x",
+    "changelog-maker": "2.3.x"
   },
   "peerDependencies": {
     "@types/bluebird": "3.x.x",
