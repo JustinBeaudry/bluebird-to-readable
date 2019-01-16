@@ -26,7 +26,7 @@
     "test": "npx jest",
     "watch:test": "npx jest --watch",
     "coverage": "npx jest --coverage",
-    "changelog": "npx changelog-maker --all > CHANGELOG.md",
+    "changelog": "npx changelog-maker --all > CHANGELOG.md && git add CHANGELOG.md && git commit --no-verify -S -m 'updates CHANGELOG'",
     "example": "npx ts-node example.ts"
   },
   "keywords": [
