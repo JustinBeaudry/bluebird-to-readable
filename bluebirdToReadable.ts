@@ -50,5 +50,5 @@ export function BluebirdToReadable<T>(
   promise: Bluebird<T>,
   options?: ReadableOptions
 ) {
-  return Reflect.construct(BluebirdToReadableStream, [promise, options]);
+  return new BluebirdToReadableStream(promise, options);
 }
