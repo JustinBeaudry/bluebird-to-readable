@@ -1,0 +1,10 @@
+{
+  "concurrent": false,
+  "linters": {
+    "bluebirdToReadable.ts": [
+      "npx tslint --fix",
+      "npx prettier --write",
+      "git add"
+    ]
+  }
+}

@@ -1,28 +1,18 @@
 {
   "defaultSeverity": "error",
   "extends": [
-    "tslint:latest",
+    "tslint:recommended",
     "tslint-config-prettier"
   ],
   "rules": {
     "no-unnecessary-type-assertion": true,
     "array-type": [true, "array"],
-    "ban-types": {
-      "options": [
-        ["Object", "Avoid using the `Object` type. Did you mean `object`?"],
-        ["Function", "Avoid using the `Function` type. Prefer a specific function type, like `() => void`, or use `ts.AnyFunction`."],
-        ["Boolean", "Avoid using the `Boolean` type. Did you mean `boolean`?"],
-        ["Number", "Avoid using the `Number` type. Did you mean `number`?"],
-        ["String", "Avoid using the `String` type. Did you mean `string`?"]
-      ]
-    },
     "class-name": true,
     "comment-format": [true, "check-space"],
     "no-debugger": true,
     "interface-name": [true, "never-prefix"],
     "interface-over-type-literal": true,
     "jsdoc-format": true,
-    "next-line": [true, "check-catch", "check-else"],
     "no-unnecessary-qualifier": true,
     "object-literal-shorthand": true,
     "no-var-keyword": true,
@@ -43,6 +33,5 @@
     "no-empty-interface": true,
     "no-empty": [true, "allow-empty-catch"],
     "no-conditional-assignment": false
-  },
-  "rulesDirectory": []
+  }
 }
