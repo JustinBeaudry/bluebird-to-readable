@@ -18,8 +18,8 @@
   },
   "scripts": {
     "clean": "rm -rf lib && rm -rf coverage",
-    "format": "npx prettier --debug-check --write '{src,tests}/**/*.ts'",
-    "lint": "npx tslint --force --format --verbose 'src/**/*,ts''",
+    "format": "npx prettier --debug-check --write 'bluebirdToReadable.ts'",
+    "lint": "npx tslint --force --format --verbose 'bluebirdToReadable.ts'",
     "prepublishOnly": "npm run build",
     "prebuild": "npm run clean && npm run format && npm run lint",
     "build": "npx tsc",

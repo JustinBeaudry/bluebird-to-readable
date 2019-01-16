@@ -41,7 +41,8 @@
     "no-invalid-this": true,
     "no-invalid-template-strings": true,
     "no-empty-interface": true,
-    "no-empty": [true, "allow-empty-catch"]
+    "no-empty": [true, "allow-empty-catch"],
+    "no-conditional-assignment": false
   },
   "rulesDirectory": []
 }
