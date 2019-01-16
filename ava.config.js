@@ -5,6 +5,7 @@ export default {
 	sources: [
 		'bluebirdToReadable.ts'
 	],
+	concurrency: 20,
 	compileEnhancements: false,
 	extensions: [
 		'ts'

@@ -1,0 +1,10 @@
+{
+  "require": [
+    "ts-node/require"
+  ],
+  "sourceMap": false,
+  "instrument": false,
+  "include": [
+    "bluebirdToReadable.ts"
+  ]
+}

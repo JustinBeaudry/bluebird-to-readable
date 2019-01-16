@@ -1,14 +1,3 @@
-#temporarily excluded modules/plugins
-packages/cli
-packages/plugin-io-s3
-packages/plugin-transform-csso
-packages/plugin-transform-handlebars
-packages/plugin-transform-htmlMinifier
-packages/plugin-transform-imgmin
-packages/plugin-transform-svgo
-
-node_modules/
-
 # General
 .DS_Store
 .AppleDouble
