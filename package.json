@@ -27,6 +27,7 @@
     "test": "npx jest",
     "watch:test": "npx jest --watch",
     "coverage": "npx jest --coverage",
+    "changelog": "npx changelog-maker --all > CHANGELOG.md",
     "example": "npx ts-node example.ts"
   },
   "keywords": [
