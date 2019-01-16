@@ -1,6 +1,6 @@
 {
   "name": "bluebird-to-readable",
-  "version": "2.0.1",
+  "version": "2.0.0",
   "description": "TypeScript library to convert a Bluebird Promise to a Readable stream.",
   "author": {
     "name": "Justin Beaudry",
