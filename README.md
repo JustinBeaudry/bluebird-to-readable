@@ -11,6 +11,8 @@
   <img src="https://travis-ci.org/JustinBeaudry/bluebird-to-readable.svg?branch=master" alt="Travis Status">
   <a href='https://coveralls.io/github/JustinBeaudry/bluebird-to-readable?branch=master'><img src='https://coveralls.io/repos/github/JustinBeaudry/bluebird-to-readable/badge.svg?branch=master' alt='Coverage Status' /></a>
   <a href="https://codeclimate.com/github/JustinBeaudry/bluebird-to-readable/maintainability"><img src="https://api.codeclimate.com/v1/badges/cb8db67dfc746d85d1f0/maintainability" /></a>
+</p>
+<p align="center">
   <img alt="Typescript 3.2" src="https://img.shields.io/badge/typescript-3.2-blue.svg">
   <a href="https://raw.githubusercontent.com/JustinBeaudry/bluebird-to-readable/master/LICENSE"><img alt="MIT License" src="https://img.shields.io/badge/license-MIT-blue.svg"></a>
   <img alt="Node 10.x.x" src="https://img.shields.io/badge/node-10.x.x-blue.svg">
