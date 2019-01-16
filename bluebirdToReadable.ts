@@ -1,5 +1,5 @@
-import { Readable } from 'stream';
 import Bluebird from 'bluebird';
+import { Readable } from 'stream';
 
 type CbAny = (...args: any[]) => void;
 
@@ -13,11 +13,11 @@ Bluebird.setScheduler((scheduler: (callback: CbAny) => void) => {
 
 type MaybeErr = Error | null;
 type DestroyCallback = (error: ( MaybeErr )) => void;
-type ReadableOptions = {
+interface ReadableOptions {
   highWaterMark?: number;
   encoding?: string;
   objectMode?: boolean;
-};
+}
 
 class BluebirdToReadableStream<T=any> extends Readable {
   private promise: Bluebird<T>;
